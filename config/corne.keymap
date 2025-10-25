@@ -14,7 +14,7 @@
         compatible = "zmk,keymap";
 
         default_layer {
-            display-name = "Default Layer";
+            display-name = "base";
 
             // -----------------------------------------------------------------------------------------
             // |  TAB |  Q  |  W  |  E  |  R  |  T  |   |  Y  |  U   |  I  |  O  |  P  | BSPC |
@@ -71,6 +71,8 @@
 &none  &trans    &trans        &trans     &trans     &trans    &none           &none           &none          &none      &trans  &trans
                                &trans     &trans     &trans    &trans          &trans          &trans
             >;
+
+            label = "nav";
         };
 
         mou {
@@ -80,6 +82,8 @@
 &trans  &trans    &trans        &trans     &trans     &trans    &msc SCRL_LEFT  &msc SCRL_DOWN  &msc SCRL_UP  &msc SCRL_RIGHT  &trans  &trans
                                 &trans     &trans     &trans    &mkp LCLK       &mkp RCLK       &mkp MCLK
             >;
+
+            label = "mouse";
         };
 
         func {
@@ -89,6 +93,8 @@
 &none  &kp F1  &kp F2   &kp F3   &kp F4   &kp C_VOLUME_DOWN    &kp C_BRIGHTNESS_DEC  &none      &none      &none     &none     &none
                         &trans   &trans   &trans               &none                 &none      &none
             >;
+
+            label = "func";
         };
 
         blu {
@@ -98,6 +104,8 @@
 &trans  &trans        &trans        &trans        &trans  &trans    &trans      &trans  &trans  &trans  &trans  &trans
                                     &trans        &trans  &trans    &trans      &trans  &trans
             >;
+
+            label = "blu";
         };
     };
 

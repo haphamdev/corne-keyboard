@@ -82,19 +82,19 @@
             //                    | GUI |     | SPC |   | ENT |     | ALT |
 
             bindings = <
-&none  &kp EXCL  &kp AT  &kp LEFT_PARENTHESIS  &kp RIGHT_PARENTHESIS  &kp PRCNT        &none         &none      &none      &none      &none      &none
-&none  &none     &none   &kp LEFT_BRACE        &kp RIGHT_BRACE        &kp AMPERSAND    &kp CAPSLOCK  &hmr RSHFT &hmr RCTRL &hmr RALT  &hmr RGUI  &none
-&none  &none     &none   &kp LEFT_BRACKET      &kp RIGHT_BRACKET      &kp MINUS        &none         &none      &none      &none      &none      &none
-                         &kp LGUI              &kp GRAVE              &kp SPACE        &kp RET       &kp BSPC   &trans
+&none  &kp EXCL  &kp AT  &kp LEFT_PARENTHESIS  &kp RIGHT_PARENTHESIS  &kp PRCNT        &none         &none          &none      &none          &none          &none
+&none  &none     &none   &kp LEFT_BRACE        &kp RIGHT_BRACE        &kp AMPERSAND    &kp CAPSLOCK  &kp RSHFT      &kp RCTRL  &kp RIGHT_ALT  &kp RIGHT_GUI  &none
+&none  &none     &none   &kp LEFT_BRACKET      &kp RIGHT_BRACKET      &kp MINUS        &none         &none          &none      &none          &none          &none
+                         &kp LGUI              &kp GRAVE              &kp SPACE        &kp RET       &kp BACKSPACE  &trans
             >;
         };
 
         nav {
             bindings = <
-&none  &trans     &trans       &trans      &trans      &trans    &kp HOME    &kp PG_UP   &kp PG_DN   &kp END    &trans  &trans
-&none  &hml LGUI  &hml LALT    &hml LCTRL  &hml LSHFT  &trans    &kp LEFT    &kp DOWN    &kp UP      &kp RIGHT  &trans  &trans
-&none  &trans     &trans       &trans      &trans      &trans    &none       &none       &none       &none      &trans  &trans
-                               &trans      &trans      &trans    &trans      &trans      &trans
+&none  &trans    &trans        &trans     &trans     &trans    &kp HOME        &kp PAGE_UP     &kp PAGE_DOWN  &kp END    &trans  &trans
+&none  &kp LGUI  &kp LEFT_ALT  &kp LCTRL  &kp LSHFT  &trans    &kp LEFT_ARROW  &kp DOWN_ARROW  &kp UP_ARROW   &kp RIGHT  &trans  &trans
+&none  &trans    &trans        &trans     &trans     &trans    &none           &none           &none          &none      &trans  &trans
+                               &trans     &trans     &trans    &trans          &trans          &trans
             >;
 
             label = "nav";
@@ -102,10 +102,10 @@
 
         mou {
             bindings = <
-&trans  &trans     &trans     &trans      &trans      &trans    &trans          &trans          &trans        &trans           &trans  &trans
-&trans  &hml LGUI  &hml LALT  &hml LCTRL  &hml LSHFT  &trans    &mmv MOVE_LEFT  &mmv MOVE_DOWN  &mmv MOVE_UP  &mmv MOVE_RIGHT  &trans  &trans
-&trans  &trans     &trans     &trans      &trans      &trans    &msc SCRL_LEFT  &msc SCRL_DOWN  &msc SCRL_UP  &msc SCRL_RIGHT  &trans  &trans
-                              &trans      &trans      &trans    &mkp LCLK       &mkp RCLK       &mkp MCLK
+&trans  &trans    &trans        &trans     &trans     &trans    &trans          &trans          &trans        &trans           &trans  &trans
+&trans  &kp LCMD  &kp LEFT_ALT  &kp LCTRL  &kp LSHFT  &trans    &mmv MOVE_LEFT  &mmv MOVE_DOWN  &mmv MOVE_UP  &mmv MOVE_RIGHT  &trans  &trans
+&trans  &trans    &trans        &trans     &trans     &trans    &msc SCRL_LEFT  &msc SCRL_DOWN  &msc SCRL_UP  &msc SCRL_RIGHT  &trans  &trans
+                                &trans     &trans     &trans    &mkp LCLK       &mkp RCLK       &mkp MCLK
             >;
 
             label = "mou";
@@ -113,10 +113,10 @@
 
         func {
             bindings = <
-&none  &kp F9  &kp F10  &kp F11  &kp F12  &kp C_MUTE           &kp C_PP          &none      &none      &none     &none     &none
-&none  &kp F5  &kp F6   &kp F7   &kp F8   &kp C_VOL_UP         &kp C_BRI_INC     &hmr RSHFT &hmr RCTRL &hmr RALT &hmr RGUI &none
-&none  &kp F1  &kp F2   &kp F3   &kp F4   &kp C_VOL_DN         &kp C_BRI_DEC     &none      &none      &none     &none     &none
-                        &trans   &trans   &trans               &none             &none      &none
+&none  &kp F9  &kp F10  &kp F11  &kp F12  &kp C_MUTE           &kp C_PLAY_PAUSE      &none      &none      &none     &none     &none
+&none  &kp F5  &kp F6   &kp F7   &kp F8   &kp C_VOLUME_UP      &kp C_BRIGHTNESS_INC  &kp RSHFT  &kp RCTRL  &kp RALT  &kp RGUI  &none
+&none  &kp F1  &kp F2   &kp F3   &kp F4   &kp C_VOLUME_DOWN    &kp C_BRIGHTNESS_DEC  &none      &none      &none     &none     &none
+                        &trans   &trans   &trans               &none                 &none      &none
             >;
 
             label = "func";

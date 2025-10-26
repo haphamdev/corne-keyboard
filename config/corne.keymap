@@ -65,7 +65,7 @@
             //                    | GUI |     | SPC |   | ENT |     | ALT |
 
             bindings = <
-&none  &kp KP_PLUS   &kp N7  &kp N8    &kp N9  &kp KP_MULTIPLY    &bt BT_SEL 0   &bt BT_SEL 1        &bt BT_SEL 2        &none                   &none                   &none
+&none  &kp KP_PLUS   &kp N7  &kp N8    &kp N9  &kp KP_MULTIPLY    &none          &none               &none               &none                   &none                   &none
 &none  &kp KP_MINUS  &kp N4  &kp N5    &kp N6  &kp KP_DIVIDE      &kp BACKSPACE  &hmr RSHFT KP_PLUS  &hmr RCTRL KP_MINUS &hmr RALT KP_MULTIPLY   &hmr RGUI KP_DIVIDE     &none
 &none  &kp N0        &kp N1  &kp N2    &kp N3  &kp KP_EQUAL       &kp COMMA      &kp DOT             &none               &none                   &none                   &none
                              &kp LGUI  &trans  &kp SPACE          &kp RET        &trans              &kp RALT

@@ -29,6 +29,16 @@
             #binding-cells = <0>;
             bindings = <&kp LG(SPACE)>;
         };
+        zoom_out: zoom_out {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings = <&kp LG(MINUS)>;
+        };
+        zoom_in: zoom_in {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings = <&macro_press &kp LGUI &kp LSHFT>, <&macro_tap &kp EQUAL>, <&macro_release &kp LGUI &kp LSHFT>;
+        };
     };
 
     behaviors {
@@ -141,10 +151,10 @@
 
         nav {
             bindings = <
-&none  &kp C_BRI_DN  &kp C_BRI_UP  &kp PSCRN     &kp K_ZOOM_OUT  &kp K_ZOOM_IN    &kp HOME        &kp PAGE_UP     &kp PAGE_DOWN  &kp END    &trans  &trans
-&none  &kp LGUI      &kp LEFT_ALT  &kp LCTRL     &kp LSHFT       &kp F12          &kp LEFT_ARROW  &kp DOWN_ARROW  &kp UP_ARROW   &kp RIGHT  &trans  &trans
-&none  &kp C_MUTE    &kp C_VOL_DN  &kp C_VOL_UP  &trans          &trans           &none           &none           &none          &none      &trans  &trans
-                                   &trans        &trans          &trans           &trans          &trans          &trans
+&none  &kp C_BRI_DN  &kp C_BRI_UP  &kp PSCRN     &zoom_out   &zoom_in     &kp HOME        &kp PAGE_UP     &kp PAGE_DOWN  &kp END    &trans  &trans
+&none  &kp LGUI      &kp LEFT_ALT  &kp LCTRL     &kp LSHFT   &kp F12      &kp LEFT_ARROW  &kp DOWN_ARROW  &kp UP_ARROW   &kp RIGHT  &trans  &trans
+&none  &kp C_MUTE    &kp C_VOL_DN  &kp C_VOL_UP  &trans      &trans       &none           &none           &none          &none      &trans  &trans
+                                   &trans        &trans      &trans       &trans          &trans          &trans
             >;
 
             label = "nav";

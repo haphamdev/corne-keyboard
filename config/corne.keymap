@@ -12,11 +12,10 @@
 // Layer definitions
 #define LYR_BASE 0
 #define LYR_NUM  1
-#define LYR_SYM  2
-#define LYR_NAV  3
-#define LYR_MOU  4
-#define LYR_FUNC 5
-#define LYR_BLU  6
+#define LYR_NAV  2
+#define LYR_MOU  3
+#define LYR_FUNC 4
+#define LYR_BLU  5
 
 / {
     behaviors {
@@ -42,6 +41,48 @@
             hold-trigger-key-positions = <0 1 2 3 4 5 12 13 14 15 16 17 24 25 26 27 28 29 36 37 38>;
             hold-trigger-on-release;
         };
+        n2: num_2 {
+            compatible = "zmk,behavior-mod-morph";
+            #binding-cells = <0>;
+            bindings = <&kp N2>, <&kp LBKT>;
+            mods = <(MOD_LSFT|MOD_RSFT)>;
+        };
+        n3: num_3 {
+            compatible = "zmk,behavior-mod-morph";
+            #binding-cells = <0>;
+            bindings = <&kp N3>, <&kp RBKT>;
+            mods = <(MOD_LSFT|MOD_RSFT)>;
+        };
+        n5: num_5 {
+            compatible = "zmk,behavior-mod-morph";
+            #binding-cells = <0>;
+            bindings = <&kp N5>, <&kp LPAR>;
+            mods = <(MOD_LSFT|MOD_RSFT)>;
+        };
+        n6: num_6 {
+            compatible = "zmk,behavior-mod-morph";
+            #binding-cells = <0>;
+            bindings = <&kp N6>, <&kp RPAR>;
+            mods = <(MOD_LSFT|MOD_RSFT)>;
+        };
+        n8: num_8 {
+            compatible = "zmk,behavior-mod-morph";
+            #binding-cells = <0>;
+            bindings = <&kp N8>, <&kp LBRC>;
+            mods = <(MOD_LSFT|MOD_RSFT)>;
+        };
+        n9: num_9 {
+            compatible = "zmk,behavior-mod-morph";
+            #binding-cells = <0>;
+            bindings = <&kp N9>, <&kp RBRC>;
+            mods = <(MOD_LSFT|MOD_RSFT)>;
+        };
+        dollar_caret: dollar_caret {
+            compatible = "zmk,behavior-mod-morph";
+            #binding-cells = <0>;
+            bindings = <&kp DOLLAR>, <&kp CARET>;
+            mods = <(MOD_LSFT|MOD_RSFT)>;
+        };
     };
 
     keymap {
@@ -60,41 +101,18 @@
 &none  &kp Q       &kp W        &kp E        &kp R        &kp T        &kp Y      &kp U        &kp I        &kp O       &kp P           &none
 &none  &hml LGUI A &hml LALT S  &hml LCTRL D &hml LSHFT F &kp G        &kp H      &hmr RSHFT J &hmr RCTRL K &hmr RALT L &hmr RGUI SEMI  &none
 &none  &kp Z       &kp X        &kp C        &kp V        &kp B        &kp N      &kp M        &kp COMMA    &kp DOT     &kp FSLH        &none
-                                &mo LYR_MOU  &lt LYR_NAV ESCAPE  &kp SPACE    &lt LYR_SYM RET  &lt LYR_NUM LC(F)  &lt LYR_FUNC DEL
+                                &mo LYR_MOU  &lt LYR_NAV ESCAPE  &kp SPACE    &kp RET  &lt LYR_NUM LC(F)  &lt LYR_FUNC DEL
             >;
         };
 
         num {
             display-name = "num";
 
-            // -----------------------------------------------------------------------------------------
-            // |  TAB |  1  |  2  |  3  |  4  |  5  |   |  6  |  7  |  8  |  9  |  0  | BSPC |
-            // | BTCLR| BT1 | BT2 | BT3 | BT4 | BT5 |   | LFT | DWN |  UP | RGT |     |      |
-            // | SHFT |     |     |     |     |     |   |     |     |     |     |     |      |
-            //                    | GUI |     | SPC |   | ENT |     | ALT |
-
             bindings = <
-&none  &kp KP_PLUS   &kp N7  &kp N8    &kp N9  &kp KP_MULTIPLY    &none          &none               &none               &none                   &none                   &none
-&none  &kp KP_MINUS  &kp N4  &kp N5    &kp N6  &kp KP_DIVIDE      &kp BACKSPACE  &hmr RSHFT KP_PLUS  &hmr RCTRL KP_MINUS &hmr RALT KP_MULTIPLY   &hmr RGUI KP_DIVIDE     &none
-&none  &kp N0        &kp N1  &kp N2    &kp N3  &kp KP_EQUAL       &kp COMMA      &kp DOT             &none               &none                   &none                   &none
-                             &kp LGUI  &trans  &kp SPACE          &kp RET        &trans              &kp RALT
-            >;
-        };
-
-        sym {
-            display-name = "sym";
-
-            // -----------------------------------------------------------------------------------------
-            // |  TAB |  !  |  @  |  #  |  $  |  %  |   |  ^  |  &  |  *  |  (  |  )  | BSPC |
-            // | CTRL |     |     |     |     |     |   |  -  |  =  |  [  |  ]  |  \  |  `   |
-            // | SHFT |     |     |     |     |     |   |  _  |  +  |  {  |  }  | "|" |  ~   |
-            //                    | GUI |     | SPC |   | ENT |     | ALT |
-
-            bindings = <
-&none  &kp EXCL   &kp AT   &kp LEFT_PARENTHESIS  &kp RIGHT_PARENTHESIS  &kp PRCNT        &none         &none          &none      &none          &none          &none
-&none  &kp BSLH   &kp DQT  &kp LEFT_BRACE        &kp RIGHT_BRACE        &kp AMPERSAND    &kp CAPSLOCK  &kp RSHFT      &kp RCTRL  &kp RIGHT_ALT  &kp RIGHT_GUI  &none
-&none  &kp PIPE   &kp SQT  &kp LEFT_BRACKET      &kp RIGHT_BRACKET      &kp MINUS        &none         &none          &none      &none          &none          &none
-                           &kp LGUI              &kp GRAVE              &kp SPACE        &kp RET       &kp BACKSPACE  &trans
+&none  &kp AMPERSAND  &kp N7  &n8             &n9     &kp GRAVE    &kp AT   &kp ASTERISK     &kp HASH   &kp PERCENT  &kp COLON      &none
+&none  &dollar_caret  &kp N4  &n5             &n6     &kp TILDE    &kp EXCL &mt RSHFT EQUAL  &kp MINUS  &kp BSLH     &kp SEMICOLON  &none
+&none  &kp N0         &kp N1  &n2             &n3     &none        &kp SQT  &kp DQT          &kp COMMA  &kp DOT      &kp FSLH       &none
+                              &trans          &trans  &trans       &trans   &trans           &trans
             >;
         };
 
@@ -162,6 +180,20 @@
             timeout-ms = <50>;
             key-positions = <14 15>;  // S D
             bindings = <&kp TAB>;
+        };
+
+        combo_num_ctrl {
+            timeout-ms = <50>;
+            key-positions = <13 14>;  // A S in num layer
+            bindings = <&kp LCTRL>;
+            layers = <LYR_NUM>;
+        };
+
+        combo_num_backspace {
+            timeout-ms = <50>;
+            key-positions = <20 21>;  // - and \ (minus and backslash) in num layer
+            bindings = <&kp BACKSPACE>;
+            layers = <LYR_NUM>;
         };
     };
 };

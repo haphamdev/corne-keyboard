@@ -9,6 +9,15 @@
 #include <dt-bindings/zmk/keys.h>
 #include <dt-bindings/zmk/pointing.h>
 
+// Layer definitions
+#define LYR_BASE 0
+#define LYR_NUM  1
+#define LYR_SYM  2
+#define LYR_NAV  3
+#define LYR_MOU  4
+#define LYR_FUNC 5
+#define LYR_BLU  6
+
 / {
     behaviors {
         hml: home_row_mod_left {
@@ -51,7 +60,7 @@
 &none  &kp Q       &kp W        &kp E        &kp R        &kp T        &kp Y      &kp U        &kp I        &kp O       &kp P           &none
 &none  &hml LGUI A &hml LALT S  &hml LCTRL D &hml LSHFT F &kp G        &kp H      &hmr RSHFT J &hmr RCTRL K &hmr RALT L &hmr RGUI SEMI  &none
 &none  &kp Z       &kp X        &kp C        &kp V        &kp B        &kp N      &kp M        &kp COMMA    &kp DOT     &kp FSLH        &none
-                                &lt 4 ESCAPE &lt 3 TAB    &kp SPACE    &lt 5 RET  &lt 1 BSPC   &lt 2 DEL
+                                &lt LYR_MOU ESCAPE &lt LYR_NAV TAB    &kp SPACE    &lt LYR_SYM RET  &lt LYR_NUM BSPC   &lt LYR_FUNC DEL
             >;
         };
 
@@ -140,7 +149,7 @@
         combo_bluetooth {
             timeout-ms = <50>;
             key-positions = <26 27 28>;  // X C V
-            bindings = <&mo 6>;
+            bindings = <&mo LYR_BLU>;
         };
     };
 };

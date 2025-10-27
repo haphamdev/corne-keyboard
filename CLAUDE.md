@@ -116,10 +116,12 @@ Numpad layout with:
 - Left side: Numpad 0-9 with operators (+, -, *, /)
 - Right side: Bluetooth selection (BT0-BT2) and modifiers
 
-### Layer 2: Symbols (`config/corne.keymap:75-90`)
+### Layer 2: Symbols (`config/corne.keymap:84-99`)
 
 Symbol layer featuring:
+- Backslash (\) and pipe (|) on A and Z positions
 - Parentheses, braces, brackets
+- Quote characters (single and double)
 - Special characters (!@%&-)
 - Caps lock on right side
 
@@ -253,14 +255,6 @@ CONFIG_ZMK_RGB_UNDERGLOW_AUTO_OFF_IDLE=y
 ```
 
 Note: This will reduce battery life significantly.
-
-## Recent Changes (from Git History)
-
-- **Latest**: Reverted "Using home mod for other layers" (d303dd1)
-- Enabled mouse simulation (b26b7a6)
-- Experimented with home row mods on multiple layers (6463f5c, reverted)
-- Optimized home row mod configurations for base layer (7906df5)
-- Disabled RGB underglow (2557261)
 
 ## Resources
 

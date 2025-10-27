@@ -60,7 +60,7 @@
 &none  &kp Q       &kp W        &kp E        &kp R        &kp T        &kp Y      &kp U        &kp I        &kp O       &kp P           &none
 &none  &hml LGUI A &hml LALT S  &hml LCTRL D &hml LSHFT F &kp G        &kp H      &hmr RSHFT J &hmr RCTRL K &hmr RALT L &hmr RGUI SEMI  &none
 &none  &kp Z       &kp X        &kp C        &kp V        &kp B        &kp N      &kp M        &kp COMMA    &kp DOT     &kp FSLH        &none
-                                &lt LYR_MOU ESCAPE &lt LYR_NAV TAB    &kp SPACE    &lt LYR_SYM RET  &lt LYR_NUM BSPC   &lt LYR_FUNC DEL
+                                &mo LYR_MOU  &lt LYR_NAV ESCAPE  &kp SPACE    &lt LYR_SYM RET  &lt LYR_NUM LC(F)  &lt LYR_FUNC DEL
             >;
         };
 
@@ -150,6 +150,18 @@
             timeout-ms = <50>;
             key-positions = <26 27 28>;  // X C V
             bindings = <&mo LYR_BLU>;
+        };
+
+        combo_backspace {
+            timeout-ms = <50>;
+            key-positions = <20 21>;  // K L
+            bindings = <&kp BACKSPACE>;
+        };
+
+        combo_tab {
+            timeout-ms = <50>;
+            key-positions = <14 15>;  // S D
+            bindings = <&kp TAB>;
         };
     };
 };

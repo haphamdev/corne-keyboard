@@ -109,10 +109,10 @@
             display-name = "num";
 
             bindings = <
-&none  &kp AMPERSAND  &kp N7  &n8             &n9     &kp GRAVE    &kp AT   &kp ASTERISK     &kp HASH   &kp PERCENT  &kp COLON      &none
-&none  &dollar_caret  &kp N4  &n5             &n6     &kp TILDE    &kp EXCL &mt RSHFT EQUAL  &kp MINUS  &kp BSLH     &kp SEMICOLON  &none
-&none  &kp N0         &kp N1  &n2             &n3     &none        &kp SQT  &kp DQT          &kp COMMA  &kp DOT      &kp FSLH       &none
-                              &trans          &trans  &trans       &trans   &trans           &trans
+&none  &kp AMPERSAND  &kp N7  &n8                &n9     &kp GRAVE    &kp AT   &kp ASTERISK     &kp HASH   &kp PERCENT  &kp COLON      &none
+&none  &dollar_caret  &kp N4  &n5                &mt LSHFT n6     &kp TILDE    &kp EXCL &mt RSHFT EQUAL  &kp MINUS  &kp BSLH     &kp SEMICOLON  &none
+&none  &kp N0         &kp N1  &n2                &n3     &none        &kp SQT  &kp DQT          &kp COMMA  &kp DOT      &kp FSLH       &none
+                              &trans             &trans  &trans       &trans   &trans           &trans
             >;
         };
 

@@ -175,10 +175,10 @@
             display-name = "app";
 
             bindings = <
-&none  &none  &none  &none  &none  &none    &none  &none  &none  &none  &none  &none
-&none  &none  &none  &none  &none  &raycast &none  &none  &none  &none  &none  &none
-&none  &none  &none  &none  &none  &none    &none  &none  &none  &none  &none  &none
-                     &trans &trans &trans   &trans &trans &trans
+&none  &kp LG(LS(N2))  &kp LG(LS(N4))  &kp LG(LS(N5))  &none  &none    &none  &none  &none  &none  &none  &none
+&none  &none           &none           &none           &none  &raycast &none  &none  &none  &none  &none  &none
+&none  &none           &none           &none           &none  &none    &none  &none  &none  &none  &none  &none
+                                       &trans          &trans &trans   &trans &trans &trans
             >;
 
             label = "app";

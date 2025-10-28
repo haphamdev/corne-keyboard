@@ -231,6 +231,13 @@
             layers = <LYR_BASE>;
         };
 
+        combo_clipboard_history {
+            timeout-ms = <50>;
+            key-positions = <15 16>;  // D F
+            bindings = <&kp LG(LS(V))>;
+            layers = <LYR_BASE>;
+        };
+
         combo_vim_quit {
             timeout-ms = <50>;
             key-positions = <1 2>;  // Q W

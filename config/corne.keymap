@@ -220,14 +220,14 @@
         combo_copy {
             timeout-ms = <50>;
             key-positions = <26 27>;  // X C
-            bindings = <&kp K_COPY>;
+            bindings = <&kp LG(C)>;
             layers = <LYR_BASE>;
         };
 
         combo_paste {
             timeout-ms = <50>;
             key-positions = <27 28>;  // C V
-            bindings = <&kp K_PASTE>;
+            bindings = <&kp LG(V)>;
             layers = <LYR_BASE>;
         };
 

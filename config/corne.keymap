@@ -258,5 +258,12 @@
             bindings = <&kp BACKSPACE>;
             layers = <LYR_NUM>;
         };
+
+        combo_nav_copy_url {
+            timeout-ms = <50>;
+            key-positions = <26 27>;  // X C
+            bindings = <&kp LG(LS(C))>;
+            layers = <LYR_NAV>;
+        };
     };
 };
